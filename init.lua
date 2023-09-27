@@ -142,12 +142,20 @@ require('lazy').setup({
     },
   },
 
+--   {
+--     -- Theme inspired by Atom
+--     'navarasu/onedark.nvim',
+--     priority = 1000,
+--     config = function()
+--       vim.cmd.colorscheme 'onedark'
+--     end,
+--   },
+
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    'rebelot/kanagawa.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'kanagawa'
     end,
   },
 
@@ -158,7 +166,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'kanagawa',
         component_separators = '|',
         section_separators = '',
       },
@@ -221,7 +229,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
@@ -264,6 +272,24 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+vim.o.backspace = '2'
+vim.o.showcmd = true
+vim.o.laststatus = 2
+vim.o.autowrite = true
+vim.o.cursorline = true -- enable highlighing of the current line
+vim.o.autoread = true
+vim.o.expandtab = true -- use spaces instead of tabs
+vim.o.autoindent = true
+vim.o.smartindent = true -- inserts indents automatically
+vim.o.showmatch = true
+vim.o.number = true -- print line number
+vim.o.relativenumber = true -- relative line numbers
+vim.o.splitright = true -- put new windows to the right of current window
+vim.o.splitbelow = true -- put new windows below the current window
+vim.o.background = "dark" -- set background dark
+vim.o.swapfile = false -- disable swap files
+vim.o.wrap = true -- wraps long lines of text to fit the screen 
 
 -- [[ Basic Keymaps ]]
 
